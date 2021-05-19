@@ -82,7 +82,7 @@ delay(1000);
   display.setTextSize(2);
   display.setCursor(0,75);
   display.print(ldrval);
-If(a&lt;=2500)
+If(ldrval<700)
 {
 digitalWrite(2,HIGH);
 display.println(“LIGHT is ON”);
@@ -93,7 +93,7 @@ Else
 digitalWrite(2,LOW);
 display.println(“ LIGHT is OFF”);
 }
-If(f&gt;28)
+If(f>28&&h>40)
 {
 digitalWrite(13,HIGH);
 display.println(“FAN is ON”);
