@@ -24,12 +24,7 @@ delay(100);
 digitalWrite(trigpin,LOW);
 int duration=pulseIn(echopin,HIGH);
 int distance=duration*0.0343/2;
-//Serial.print("the distance is");
 
-//delay(1000);
-  //if (Serial.available()) {
-    //SerialBT.write(Serial.read());
-  //}
   Serial.println(distance);
    SerialBT.write(distance);
    delay(1000);
