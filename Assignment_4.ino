@@ -30,7 +30,9 @@ int distance=duration*0.0343/2;
   //if (Serial.available()) {
     //SerialBT.write(Serial.read());
   //}
-  
+  Serial.println(distance);
+   SerialBT.write(distance);
+   delay(1000);
   
   if (SerialBT.available()) {//for availability of blut_app
     Serial.write(SerialBT.read());
@@ -43,10 +45,6 @@ int distance=duration*0.0343/2;
   if (SerialBT.read() == '1'){//led on
     digitalWrite(2,HIGH);
   }
-  delay(1000);
+  
 }
-Serial.println(distance);
-SerialBT.write(distance);
-  delay(1000);
-
 }
